@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0000001000000000000A001 /* GeraniumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A001 /* GeraniumApp.swift */; };
+		B0000001000000000000A002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A002 /* ContentView.swift */; };
+		B0000001000000000000A003 /* LocSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A003 /* LocSimView.swift */; };
+		B0000001000000000000A004 /* LocSimManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A004 /* LocSimManager.swift */; };
+		B0000001000000000000A005 /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A005 /* CustomMapView.swift */; };
+		B0000001000000000000A006 /* CoordTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A006 /* CoordTransform.swift */; };
+		B0000001000000000000A007 /* RouteSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A007 /* RouteSimulator.swift */; };
+		B0000001000000000000A008 /* RouteSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A008 /* RouteSimView.swift */; };
+		B0000001000000000000A009 /* GPXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A009 /* GPXParser.swift */; };
+		B0000001000000000000A00A /* JoystickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A00A /* JoystickView.swift */; };
+		B0000001000000000000A00B /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A00B /* FavoritesView.swift */; };
+		B0000001000000000000A00C /* AppProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A00C /* AppProfilesView.swift */; };
+		B0000001000000000000A00D /* FloatingQuickMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A00D /* FloatingQuickMenu.swift */; };
+		B0000001000000000000A00E /* BookMarkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A00E /* BookMarkHelper.swift */; };
+		B0000001000000000000A00F /* BookMarkSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A00F /* BookMarkSlider.swift */; };
+		B0000001000000000000A010 /* Addon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A010 /* Addon.swift */; };
+		B0000001000000000000A011 /* RootHelperMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A011 /* RootHelperMan.swift */; };
+		B0000001000000000000A012 /* TSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A012 /* TSUtil.m */; };
+		B0000001000000000000A013 /* GeraniumRootHelper in Resources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A013 /* GeraniumRootHelper */; };
+		B0000001000000000000A018 /* AlertKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0000001000000000000A001 /* AlertKit */; };
+		B0000001000000000000A014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A01C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E0000001000000000000A002 /* Copy RootHelper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Copy RootHelper";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp \"${SRCROOT}/Geranium/GeraniumRootHelper\" \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}/GeraniumRootHelper\"\nchmod +x \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}/GeraniumRootHelper\"\n";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A0000001000000000000A01C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0000001000000000000A001 /* GeraniumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeraniumApp.swift; sourceTree = "<group>"; };
+		A0000001000000000000A002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A0000001000000000000A003 /* LocSimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocSimView.swift; sourceTree = "<group>"; };
+		A0000001000000000000A004 /* LocSimManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocSimManager.swift; sourceTree = "<group>"; };
+		A0000001000000000000A005 /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
+		A0000001000000000000A006 /* CoordTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordTransform.swift; sourceTree = "<group>"; };
+		A0000001000000000000A007 /* RouteSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSimulator.swift; sourceTree = "<group>"; };
+		A0000001000000000000A008 /* RouteSimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSimView.swift; sourceTree = "<group>"; };
+		A0000001000000000000A009 /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
+		A0000001000000000000A00A /* JoystickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickView.swift; sourceTree = "<group>"; };
+		A0000001000000000000A00B /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		A0000001000000000000A00C /* AppProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProfilesView.swift; sourceTree = "<group>"; };
+		A0000001000000000000A00D /* FloatingQuickMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingQuickMenu.swift; sourceTree = "<group>"; };
+		A0000001000000000000A00E /* BookMarkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkHelper.swift; sourceTree = "<group>"; };
+		A0000001000000000000A00F /* BookMarkSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkSlider.swift; sourceTree = "<group>"; };
+		A0000001000000000000A010 /* Addon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addon.swift; sourceTree = "<group>"; };
+		A0000001000000000000A011 /* RootHelperMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootHelperMan.swift; sourceTree = "<group>"; };
+		A0000001000000000000A012 /* TSUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSUtil.m; sourceTree = "<group>"; };
+		A0000001000000000000A013 /* GeraniumRootHelper */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = GeraniumRootHelper; sourceTree = "<group>"; };
+		A0000001000000000000A014 /* TSUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSUtil.h; sourceTree = "<group>"; };
+		A0000001000000000000A015 /* CoreServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreServices.h; sourceTree = "<group>"; };
+		A0000001000000000000A016 /* LocSimPrivateHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocSimPrivateHeaders.h; sourceTree = "<group>"; };
+		A0000001000000000000A017 /* Geranium-Bringing-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Geranium-Bringing-Header.h"; sourceTree = "<group>"; };
+		A0000001000000000000A018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0000001000000000000A019 /* Geranium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Geranium.entitlements; sourceTree = "<group>"; };
+		A0000001000000000000A01A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0000001000000000000A01B /* Geranium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geranium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0000001000000000000A001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0000001000000000000A018 /* AlertKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0000001000000000000A001 = {
+			isa = PBXGroup;
+			children = (
+				C0000001000000000000A002 /* Geranium */,
+				C0000001000000000000A003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0000001000000000000A003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0000001000000000000A01B /* Geranium.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0000001000000000000A002 /* Geranium */ = {
+			isa = PBXGroup;
+			children = (
+				A0000001000000000000A001 /* GeraniumApp.swift */,
+				A0000001000000000000A002 /* ContentView.swift */,
+				C0000001000000000000A004 /* LocSim */,
+				C0000001000000000000A005 /* Libs */,
+				A0000001000000000000A01A /* Assets.xcassets */,
+				A0000001000000000000A01C /* LaunchScreen.storyboard */,
+				A0000001000000000000A018 /* Info.plist */,
+				A0000001000000000000A019 /* Geranium.entitlements */,
+				A0000001000000000000A017 /* Geranium-Bringing-Header.h */,
+			);
+			path = Geranium;
+			sourceTree = "<group>";
+		};
+		C0000001000000000000A004 /* LocSim */ = {
+			isa = PBXGroup;
+			children = (
+				A0000001000000000000A003 /* LocSimView.swift */,
+				A0000001000000000000A004 /* LocSimManager.swift */,
+				A0000001000000000000A005 /* CustomMapView.swift */,
+				A0000001000000000000A006 /* CoordTransform.swift */,
+				A0000001000000000000A007 /* RouteSimulator.swift */,
+				A0000001000000000000A008 /* RouteSimView.swift */,
+				A0000001000000000000A009 /* GPXParser.swift */,
+				A0000001000000000000A00A /* JoystickView.swift */,
+				A0000001000000000000A00B /* FavoritesView.swift */,
+				A0000001000000000000A00C /* AppProfilesView.swift */,
+				A0000001000000000000A00D /* FloatingQuickMenu.swift */,
+				A0000001000000000000A016 /* LocSimPrivateHeaders.h */,
+				C0000001000000000000A006 /* BookMark */,
+			);
+			path = LocSim;
+			sourceTree = "<group>";
+		};
+		C0000001000000000000A006 /* BookMark */ = {
+			isa = PBXGroup;
+			children = (
+				A0000001000000000000A00E /* BookMarkHelper.swift */,
+				A0000001000000000000A00F /* BookMarkSlider.swift */,
+			);
+			path = BookMark;
+			sourceTree = "<group>";
+		};
+		C0000001000000000000A005 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				A0000001000000000000A010 /* Addon.swift */,
+				A0000001000000000000A011 /* RootHelperMan.swift */,
+				A0000001000000000000A013 /* GeraniumRootHelper */,
+				C0000001000000000000A007 /* TrollStore */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		C0000001000000000000A007 /* TrollStore */ = {
+			isa = PBXGroup;
+			children = (
+				A0000001000000000000A014 /* TSUtil.h */,
+				A0000001000000000000A012 /* TSUtil.m */,
+				A0000001000000000000A015 /* CoreServices.h */,
+			);
+			path = TrollStore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0000001000000000000A008 /* Geranium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0000001000000000000A003 /* Build configuration list for PBXNativeTarget "Geranium" */;
+			buildPhases = (
+				E0000001000000000000A000 /* Sources */,
+				E0000001000000000000A001 /* Frameworks */,
+				E0000001000000000000A003 /* Resources */,
+				E0000001000000000000A002 /* Copy RootHelper */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Geranium;
+			packageProductDependencies = (
+				D0000001000000000000A001 /* AlertKit */,
+			);
+			productName = Geranium;
+			productReference = A0000001000000000000A01B /* Geranium.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0000001000000000000A001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C0000001000000000000A008 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = D0000001000000000000A002 /* Build configuration list for PBXProject "LocSimOnly" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0000001000000000000A001;
+			packageReferences = (
+				D0000001000000000000A004 /* XCRemoteSwiftPackageReference "AlertKit" */,
+			);
+			productRefGroup = C0000001000000000000A003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0000001000000000000A008 /* Geranium */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0000001000000000000A003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0000001000000000000A013 /* GeraniumRootHelper in Resources */,
+				B0000001000000000000A014 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0000001000000000000A000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0000001000000000000A001 /* GeraniumApp.swift in Sources */,
+				B0000001000000000000A002 /* ContentView.swift in Sources */,
+				B0000001000000000000A003 /* LocSimView.swift in Sources */,
+				B0000001000000000000A004 /* LocSimManager.swift in Sources */,
+				B0000001000000000000A005 /* CustomMapView.swift in Sources */,
+				B0000001000000000000A006 /* CoordTransform.swift in Sources */,
+				B0000001000000000000A007 /* RouteSimulator.swift in Sources */,
+				B0000001000000000000A008 /* RouteSimView.swift in Sources */,
+				B0000001000000000000A009 /* GPXParser.swift in Sources */,
+				B0000001000000000000A00A /* JoystickView.swift in Sources */,
+				B0000001000000000000A00B /* FavoritesView.swift in Sources */,
+				B0000001000000000000A00C /* AppProfilesView.swift in Sources */,
+				B0000001000000000000A00D /* FloatingQuickMenu.swift in Sources */,
+				B0000001000000000000A00E /* BookMarkHelper.swift in Sources */,
+				B0000001000000000000A00F /* BookMarkSlider.swift in Sources */,
+				B0000001000000000000A010 /* Addon.swift in Sources */,
+				B0000001000000000000A011 /* RootHelperMan.swift in Sources */,
+				B0000001000000000000A012 /* TSUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D0000001000000000000A005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0000001000000000000A006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0000001000000000000A007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Geranium/Info.plist;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.5.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.son3ra1n.andromeda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Geranium/Geranium-Bringing-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0000001000000000000A008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Geranium/Info.plist;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.5.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.son3ra1n.andromeda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Geranium/Geranium-Bringing-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0000001000000000000A002 /* Build configuration list for PBXProject "LocSimOnly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0000001000000000000A005 /* Debug */,
+				D0000001000000000000A006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0000001000000000000A003 /* Build configuration list for PBXNativeTarget "Geranium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0000001000000000000A007 /* Debug */,
+				D0000001000000000000A008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0000001000000000000A004 /* XCRemoteSwiftPackageReference "AlertKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparrowcode/AlertKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0000001000000000000A001 /* AlertKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0000001000000000000A004 /* XCRemoteSwiftPackageReference "AlertKit" */;
+			productName = AlertKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F0000001000000000000A001 /* Project object */;
+}

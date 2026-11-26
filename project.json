@@ -1,0 +1,54 @@
+{
+  "name": "LocSimOnly",
+  "scheme": "Geranium",
+  "deploymentTarget": "15.0",
+  "dependencies": [
+    {
+      "repo": "https://github.com/sparrowcode/AlertKit",
+      "product": "AlertKit",
+      "note": "Only third-party package. Declared in LocSimOnly.xcodeproj/project.pbxproj."
+    }
+  ],
+  "sources": [
+    "Geranium/GeraniumApp.swift",
+    "Geranium/ContentView.swift",
+    "Geranium/LocSim/LocSimView.swift",
+    "Geranium/LocSim/LocSimManager.swift",
+    "Geranium/LocSim/CustomMapView.swift",
+    "Geranium/LocSim/CoordTransform.swift",
+    "Geranium/LocSim/RouteSimulator.swift",
+    "Geranium/LocSim/RouteSimView.swift",
+    "Geranium/LocSim/GPXParser.swift",
+    "Geranium/LocSim/JoystickView.swift",
+    "Geranium/LocSim/FavoritesView.swift",
+    "Geranium/LocSim/AppProfilesView.swift",
+    "Geranium/LocSim/FloatingQuickMenu.swift",
+    "Geranium/LocSim/BookMark/BookMarkHelper.swift",
+    "Geranium/LocSim/BookMark/BookMarkSlider.swift",
+    "Geranium/Libs/Addon.swift",
+    "Geranium/Libs/RootHelperMan.swift",
+    "Geranium/Libs/TrollStore/TSUtil.m"
+  ],
+  "headers": [
+    "Geranium/Geranium-Bringing-Header.h",
+    "Geranium/LocSim/LocSimPrivateHeaders.h",
+    "Geranium/Libs/TrollStore/TSUtil.h",
+    "Geranium/Libs/TrollStore/CoreServices.h"
+  ],
+  "resources": [
+    "Geranium/GeraniumRootHelper",
+    "Geranium/Assets.xcassets",
+    "Geranium/LaunchScreen.storyboard"
+  ],
+  "plists": {
+    "Info.plist": "Geranium/Info.plist",
+    "entitlements": "Geranium/Geranium.entitlements",
+    "ldid_entitlements": "entitlements.plist"
+  },
+  "swiftSettings": {
+    "SWIFT_OBJC_BRIDGING_HEADER": "Geranium/Geranium-Bringing-Header.h",
+    "SWIFT_VERSION": "5.0",
+    "PRODUCT_BUNDLE_IDENTIFIER": "com.son3ra1n.andromeda",
+    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+  }
+}
