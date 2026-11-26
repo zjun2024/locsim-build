@@ -27,7 +27,6 @@
 		B0000001000000000000A012 /* TSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A012 /* TSUtil.m */; };
 		B0000001000000000000A013 /* GeraniumRootHelper in Resources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A013 /* GeraniumRootHelper */; };
 		B0000001000000000000A018 /* AlertKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0000001000000000000A001 /* AlertKit */; };
-		B0000001000000000000A014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0000001000000000000A01C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,7 +45,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A0000001000000000000A01C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0000001000000000000A001 /* GeraniumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeraniumApp.swift; sourceTree = "<group>"; };
 		A0000001000000000000A002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0000001000000000000A003 /* LocSimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocSimView.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				C0000001000000000000A004 /* LocSim */,
 				C0000001000000000000A005 /* Libs */,
 				A0000001000000000000A01A /* Assets.xcassets */,
-				A0000001000000000000A01C /* LaunchScreen.storyboard */,
 				A0000001000000000000A018 /* Info.plist */,
 				A0000001000000000000A019 /* Geranium.entitlements */,
 				A0000001000000000000A017 /* Geranium-Bringing-Header.h */,
@@ -236,7 +233,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0000001000000000000A013 /* GeraniumRootHelper in Resources */,
-				B0000001000000000000A014 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +342,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Geranium/Info.plist;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,7 +374,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Geranium/Info.plist;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
