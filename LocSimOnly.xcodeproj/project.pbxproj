@@ -116,6 +116,7 @@
 				A0000001000000000000A018 /* Info.plist */,
 				A0000001000000000000A019 /* Geranium.entitlements */,
 				A0000001000000000000A017 /* Geranium-Bringing-Header.h */,
+				A0000001000000000000A013 /* GeraniumRootHelper */,
 			);
 			path = Geranium;
 			sourceTree = "<group>";
@@ -154,7 +155,6 @@
 			children = (
 				A0000001000000000000A010 /* Addon.swift */,
 				A0000001000000000000A011 /* RootHelperMan.swift */,
-				A0000001000000000000A013 /* GeraniumRootHelper */,
 				C0000001000000000000A007 /* TrollStore */,
 			);
 			path = Libs;
