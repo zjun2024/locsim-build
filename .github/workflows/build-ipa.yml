@@ -1,8 +1,8 @@
-﻿name: Build LocSim IPA
+name: Build LocSim IPA
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -11,18 +11,21 @@ permissions:
 jobs:
   build:
     runs-on: macos-14
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Show Xcode version
+      - name: Select Xcode
         run: |
+          sudo xcode-select -s /Applications/Xcode.app
           xcodebuild -version
 
       - name: Install ldid
-        run: brew install ldid
+        run: |
+          brew install ldid
+          ldid -v || true
 
       - name: Resolve Swift packages
         run: |
@@ -32,8 +35,9 @@ jobs:
             -scheme Geranium \
             -derivedDataPath build/DerivedData \
             -clonedSourcePackagesDirPath build/SourcePackages
+          ls -la build/SourcePackages 2>/dev/null || true
 
-      - name: Build (unsigned Release)
+      - name: Build unsigned Release arm64
         run: |
           set -o pipefail
           xcodebuild \
@@ -60,7 +64,7 @@ jobs:
           APP="build/DerivedData/Build/Products/Release-iphoneos/Geranium.app"
           rm -rf "$APP/_CodeSignature" "$APP/embedded.mobileprovision" "$APP/PlugIns"
 
-      - name: Sign with ldid + entitlements
+      - name: Sign with ldid
         run: |
           APP="build/DerivedData/Build/Products/Release-iphoneos/Geranium.app"
           ldid -S entitlements.plist "$APP/Geranium"
@@ -71,7 +75,7 @@ jobs:
           fi
           ldid -e "$APP/Geranium" | grep -E "locationd|platform-application|no-sandbox" || true
 
-      - name: Package as IPA
+      - name: Package IPA
         run: |
           APP="build/DerivedData/Build/Products/Release-iphoneos/Geranium.app"
           rm -rf Payload LocSim.ipa
