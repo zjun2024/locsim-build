@@ -10,22 +10,15 @@ permissions:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-14
     timeout-minutes: 25
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
-        run: |
-          sudo xcode-select -s /Applications/Xcode.app
-          xcodebuild -version
-
-      - name: Install ldid
-        run: |
-          brew install ldid
-          ldid -v || true
+      - name: Show Xcode version
+        run: xcodebuild -version
 
       - name: Resolve Swift packages
         run: |
@@ -37,7 +30,7 @@ jobs:
             -clonedSourcePackagesDirPath build/SourcePackages
           ls -la build/SourcePackages 2>/dev/null || true
 
-      - name: Build unsigned Release arm64
+      - name: Build Release (ad-hoc signed)
         run: |
           set -o pipefail
           xcodebuild \
@@ -47,38 +40,27 @@ jobs:
             -derivedDataPath build/DerivedData \
             -destination 'generic/platform=iOS' \
             ONLY_ACTIVE_ARCH=NO \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY="" \
             ARCHS=arm64 \
+            CODE_SIGNING_ALLOWED=YES \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGN_ENTITLEMENTS="Geranium/Geranium.entitlements" \
             build
 
-      - name: Verify app bundle
+      - name: Verify app bundle and entitlements
         run: |
           APP="build/DerivedData/Build/Products/Release-iphoneos/Geranium.app"
           ls -la "$APP"
           test -f "$APP/Geranium"
+          echo "--- LC_CODE_SIGNATURE ---"
+          /usr/bin/otool -l "$APP/Geranium" | grep -A 2 LC_CODE_SIGNATURE | head -6
+          echo "--- embedded entitlements ---"
+          /usr/bin/codesign -d --entitlements :- "$APP/Geranium" 2>&1 | sed -n '1,80p'
 
       - name: Strip Apple signing leftovers
         run: |
           APP="build/DerivedData/Build/Products/Release-iphoneos/Geranium.app"
           rm -rf "$APP/_CodeSignature" "$APP/embedded.mobileprovision" "$APP/PlugIns"
-
-      - name: Sign with ldid
-        run: |
-          APP="build/DerivedData/Build/Products/Release-iphoneos/Geranium.app"
-          # The bundled RootHelper is a pre-signed Apple binary: its legacy
-          # code signature confuses ldid's ad-hoc signing path.
-          if [ -f "$APP/GeraniumRootHelper" ]; then
-            /usr/bin/codesign --remove-signature "$APP/GeraniumRootHelper" || true
-          fi
-          ldid -S entitlements.plist "$APP/Geranium"
-          chmod 755 "$APP/Geranium"
-          if [ -f "$APP/GeraniumRootHelper" ]; then
-            chmod 755 "$APP/GeraniumRootHelper"
-            ldid -S entitlements.plist "$APP/GeraniumRootHelper"
-          fi
-          ldid -e "$APP/Geranium" | grep -E "locationd|platform-application|no-sandbox" || true
 
       - name: Package IPA
         run: |
