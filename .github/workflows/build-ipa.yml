@@ -67,6 +67,11 @@ jobs:
       - name: Sign with ldid
         run: |
           APP="build/DerivedData/Build/Products/Release-iphoneos/Geranium.app"
+          # The bundled RootHelper is a pre-signed Apple binary: its legacy
+          # code signature confuses ldid's ad-hoc signing path.
+          if [ -f "$APP/GeraniumRootHelper" ]; then
+            /usr/bin/codesign --remove-signature "$APP/GeraniumRootHelper" || true
+          fi
           ldid -S entitlements.plist "$APP/Geranium"
           chmod 755 "$APP/Geranium"
           if [ -f "$APP/GeraniumRootHelper" ]; then
